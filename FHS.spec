@@ -8,7 +8,7 @@ Release:	62
 License:	GPL
 Group:		Base
 URL:		http://www.pathname.com/fhs/
-BuildRequires:	mktemp
+BuildRequires:	coreutils
 Requires:	setup
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
