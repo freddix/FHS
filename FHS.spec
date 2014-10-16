@@ -4,7 +4,7 @@
 Summary:	Basic FHS 2.3 filesystem layout
 Name:		FHS
 Version:	2.3
-Release:	62
+Release:	63
 License:	GPL
 Group:		Base
 URL:		http://www.pathname.com/fhs/
@@ -97,10 +97,10 @@ check_filesystem_dirs
 %dir /home
 %dir /lib
 %dir /usr/lib/modules
-%attr(775,root,disk) %dir /media
+%dir /media
 %dir /mnt
 %dir /opt
-%attr(555,root,proc) %verify(not group) /proc
+%dir /proc
 %attr(700,root,root) /root
 %dir /sbin
 %attr(751,root,root) /srv
@@ -176,13 +176,13 @@ check_filesystem_dirs
 %dir /var/lib
 %dir /var/lib/misc
 %dir /var/local
-%attr(1771,root,uucp) %dir /var/lock
-%attr(751,root,root) /var/log
-%attr(2775,root,mail) /var/mail
+%dir /var/log
 %dir /var/opt
 %dir /var/run
 %dir /var/spool
+%attr(1771,root,uucp) %dir /var/lock
 %attr(1777,root,root) %dir /var/tmp
+%attr(1777,root,root) %dir /var/mail
 
 %if "%{_lib}" == "lib64"
 %dir /lib64
